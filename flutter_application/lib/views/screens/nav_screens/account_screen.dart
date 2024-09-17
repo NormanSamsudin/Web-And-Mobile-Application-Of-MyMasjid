@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/controllers/auth_controller.dart';
+import 'package:flutter_application/views/common_widget/headerWidget.dart';
 
 class AccountScreen extends StatelessWidget {
   AccountScreen({super.key});
@@ -8,12 +9,17 @@ class AccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-            onPressed: () async {
-              await _authController.signOutUsers(context: context);
-            },
-            child: Text('Sign out')),
+      body: Column(
+        children: [
+          HeaderWidget(),
+          Center(
+            child: ElevatedButton(
+                onPressed: () async {
+                  await _authController.signOutUsers(context: context);
+                },
+                child: Text('Sign out')),
+          ),
+        ],
       ),
     );
   }

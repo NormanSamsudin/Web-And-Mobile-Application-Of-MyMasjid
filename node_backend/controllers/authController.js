@@ -51,15 +51,16 @@ exports.signup = catchAsync(async (req, res, next) => {
   //const newUser = await User.create(req.body);
   // macam ni lagy bagus sebab orang lain x boleh tambah bende yang pelik2
   const newUser = await User.create({
-    name: req.body.name,
+    fullName: req.body.fullName,
     email: req.body.email,
     password: req.body.password,
     confirmPassword: req.body.confirmPassword,
-    role: req.body.role
+    role: 'user'
   });
 
   // custom function to give response and set status code
-  createSendToken(newUser, 201, res);
+  //createSendToken(newUser, 201, res);
+  res.status(201).json({ newUser });
 });
 
 exports.login = catchAsync(async (req, res, next) => {

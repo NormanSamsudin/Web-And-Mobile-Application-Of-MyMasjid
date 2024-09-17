@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 
 //create user schema
 const userSchema = new mongoose.Schema({
-  name: {
+  fullName: {
     type: String,
     required: [true, 'User must have a name'],
     unique: true,
@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
   photo: String,
   role: {
     type: String,
-    enum: ['user', 'guide', 'lead-guide', 'admin'], // type of user exists in this
+    enum: ['user', 'admin'], // type of user exists in this
     default: 'user'
   },
   password: {
@@ -55,6 +55,18 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: true,
     select: false //filter select
+  },
+  state: {
+    type: String,
+    default: ''
+  },
+  city: {
+    type: String,
+    default: ''
+  },
+  locality: {
+    type: String,
+    default: ''
   }
 });
 

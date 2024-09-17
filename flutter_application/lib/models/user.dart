@@ -8,6 +8,7 @@ class User {
   final String city;
   final String locality;
   final String password;
+  final String confirmPassword;
   final String token;
 
   User(
@@ -18,6 +19,7 @@ class User {
       required this.city,
       required this.locality,
       required this.password,
+      required this.confirmPassword,
       required this.token});
 
   // Serialization: Convert User object to a Map
@@ -30,6 +32,7 @@ class User {
       'city': city,
       'locality': locality,
       'password': password,
+      'confirmPassword': confirmPassword,
       'token': token
     };
   }
@@ -52,6 +55,7 @@ class User {
       city: map['city'] as String? ?? "",
       locality: map['locality'] as String? ?? "",
       password: map['password'] as String? ?? "",
+      confirmPassword: map['confirmPassword'] as String? ?? "",
       token: map['token'] as String? ?? "",
     );
   }

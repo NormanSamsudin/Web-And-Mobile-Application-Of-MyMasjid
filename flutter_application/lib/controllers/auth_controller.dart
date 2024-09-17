@@ -29,8 +29,10 @@ class AuthController {
           city: '',
           locality: '',
           password: password,
+          confirmPassword: password,
           token: '');
-      http.Response response = await http.post(Uri.parse('$uri/api/signup'),
+      http.Response response = await http.post(
+          Uri.parse('$uri/api/v1/users/signup'),
           body: user.toJson(),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8'
@@ -59,7 +61,8 @@ class AuthController {
     required String password,
   }) async {
     try {
-      http.Response response = await http.post(Uri.parse('$uri/api/signin'),
+      http.Response response = await http.post(
+          Uri.parse('$uri/api/v1/users/login'),
           body: jsonEncode({'email': email, 'password': password}),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8'
@@ -79,7 +82,8 @@ class AuthController {
             await preferences.setString('auth_token', token);
 
             //Encode the user data recieved from the server as json
-            final userJson = jsonEncode(jsonDecode(response.body)['user']);
+            final userJson =
+                jsonEncode(jsonDecode(response.body)['data']['user']);
 
             // update the application state with the user data via riverpod
             providerContainer.read(userProvider.notifier).setUser(userJson);

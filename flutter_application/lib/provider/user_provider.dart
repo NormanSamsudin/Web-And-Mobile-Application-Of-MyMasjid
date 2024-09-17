@@ -18,6 +18,7 @@ class UserProvider extends StateNotifier<User?> {
           city: '',
           locality: '',
           password: '',
+          confirmPassword: '',
           token: '',
         ));
 

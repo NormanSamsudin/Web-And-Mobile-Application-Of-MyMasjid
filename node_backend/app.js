@@ -8,6 +8,7 @@ const xxs = require('xss-clean');
 const AppError = require('./utils/AppError');
 const globalErrorHandler = require('./controllers/errorController');
 const userRouter = require('./routes/userRoutes');
+const bannerRouter = require('./routes/bannerRoutes');
 const secureHeaders = require('./config/secureHeader');
 const limiter = require('./config/limiter');
 const swaggerSpesification = require('./config/swaggerOption');
@@ -62,6 +63,7 @@ app.use(
 );
 
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/banners', bannerRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

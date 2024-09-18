@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/views/common_widget/title_feature.dart';
 import 'package:flutter_application/glabal_variable.dart';
+import 'package:flutter_application/views/screens/detail_secreen/activity_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/qr_screen.dart';
+import 'package:flutter_application/views/screens/detail_secreen/review_screen.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 class ServiceWidget extends StatelessWidget {
@@ -33,9 +35,9 @@ class ServiceWidget extends StatelessWidget {
     ];
 
     final List<Widget> _pages = [
+      const ReviewScreen(),
       const QrScreen(),
-      const QrScreen(),
-      const QrScreen(),
+      const ActivityScreen(),
       const QrScreen(),
       const QrScreen(),
       const QrScreen(),

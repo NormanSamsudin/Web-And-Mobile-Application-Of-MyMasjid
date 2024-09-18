@@ -2,21 +2,21 @@ import 'dart:convert';
 import 'dart:ffi';
 import 'package:flutter_application/models/user.dart';
 
-class ReviewModel {
+class ActivityModel {
   final String id;
   final String userId;
   final String mosqueId;
-  final String message;
-  final int rating;
+  final String programName;
+  final String speaker;
   final DateTime createdAt;
   final String imageUrl;
 
-  ReviewModel(
+  ActivityModel(
       {required this.id,
       required this.userId,
       required this.mosqueId,
-      required this.message,
-      required this.rating,
+      required this.programName,
+      required this.speaker,
       required this.createdAt,
       required this.imageUrl});
 
@@ -25,8 +25,8 @@ class ReviewModel {
       "_id": id,
       "userId": userId,
       "mosqueId": mosqueId,
-      "message": message,
-      "rating": rating,
+      "programName": programName,
+      "speaker": speaker,
       "createdAt": createdAt.toString(),
       "imageUrl": imageUrl
     };
@@ -34,13 +34,13 @@ class ReviewModel {
 
   String toJson() => json.encode(toMap());
 
-  factory ReviewModel.fromJson(Map<String, dynamic> map) {
-    return ReviewModel(
+  factory ActivityModel.fromJson(Map<String, dynamic> map) {
+    return ActivityModel(
       id: map['_id'] as String,
       userId: map['userId'] as String,
       mosqueId: map['mosqueId'] as String,
-      message: map['message'] as String,
-      rating: map['rating'] as int,
+      programName: map['programName'] as String,
+      speaker: map['speaker'] as String,
       createdAt: DateTime.parse(map['createdAt'] as String),
       imageUrl: map['imageUrl'] as String,
     );

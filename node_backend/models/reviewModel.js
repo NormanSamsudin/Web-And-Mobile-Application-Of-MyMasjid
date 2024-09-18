@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 
 // seat schema
 const reviewSchema = mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+  userId: {
+    type: String,
+    required: true
+  },
+  mosqueId: {
+    type: String,
     required: true
   },
   message: {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application/controllers/banner_controller.dart';
 import 'package:flutter_application/models/banner.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:flutter_application/glabal_variable.dart';
 
 class BannerWidget extends StatefulWidget {
   const BannerWidget({super.key});
@@ -60,12 +61,12 @@ class _BannerWidgetState extends State<BannerWidget> {
                             borderRadius: BorderRadius.circular(30),
                             // boxShadow: [
                             //   BoxShadow(
-                                
+
                             //     color: Colors.grey.withOpacity(0.5),
                             //     spreadRadius: 3,
                             //     blurRadius: 5,
                             //     offset: const Offset(
-                            //         1, 1), 
+                            //         1, 1),
                             //   ),
                             // ],
                           ),
@@ -90,7 +91,7 @@ class _BannerWidgetState extends State<BannerWidget> {
                       count: banner.length,
                       effect: const ExpandingDotsEffect(
                         dotColor: Colors.grey, // Unselected dot color
-                        activeDotColor: Colors.blueAccent, // Selected dot color
+                        activeDotColor: darkblue, // Selected dot color
                         dotHeight: 10,
                         dotWidth: 10,
                       ),

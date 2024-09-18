@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/views/common_widget/title_feature.dart';
 import 'package:flutter_application/glabal_variable.dart';
+import 'package:flutter_application/views/screens/detail_secreen/qr_screen.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 class ServiceWidget extends StatelessWidget {
@@ -29,6 +30,17 @@ class ServiceWidget extends StatelessWidget {
       //const Icon(Icons.volunteer_activism),
       const Icon(Icons.info),
       const Icon(Icons.contact_phone),
+    ];
+
+    final List<Widget> _pages = [
+      const QrScreen(),
+      const QrScreen(),
+      const QrScreen(),
+      const QrScreen(),
+      const QrScreen(),
+      const QrScreen(),
+      const QrScreen(),
+      const QrScreen()
     ];
 
     return Padding(
@@ -71,9 +83,9 @@ class ServiceWidget extends StatelessWidget {
                                   spreadRadius: 0.5,
                                   offset: Offset(1, 1))
                             ]),
-                        child:  Padding(
-                          padding: const  EdgeInsets.all(5),
-                          child:  CircleAvatar(
+                        child: Padding(
+                          padding: const EdgeInsets.all(5),
+                          child: CircleAvatar(
                             radius: 35,
                             backgroundColor: darkblue,
                             foregroundColor: darkblue,
@@ -93,7 +105,14 @@ class ServiceWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => _pages[index],
+                    ),
+                  );
+                },
               ),
             );
           },

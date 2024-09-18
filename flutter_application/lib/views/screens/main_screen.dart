@@ -11,7 +11,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _pageIndex = 1;
+  int _pageIndex = 2;
   final List<Widget> _pages = [SettingScreen(), HomeScreen(), AccountScreen()];
 
   @override
@@ -21,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
         height: 90,
         child: BottomNavigationBar(
           iconSize: 30,
-          selectedItemColor: darkPurple,
+          selectedItemColor: darkblue,
           unselectedItemColor: Colors.grey,
           currentIndex: _pageIndex,
           onTap: (value) {
@@ -42,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
                   Icons.settings,
                   weight: 0.05,
                   color: _pageIndex == 0
-                      ? darkPurple
+                      ? darkblue
                       : const Color.fromARGB(123, 158, 158, 158),
                 ),
                 label: "Settings"),
@@ -51,7 +51,7 @@ class _MainScreenState extends State<MainScreen> {
                   Icons.home_outlined,
                   weight: 0.05,
                   color: _pageIndex == 1
-                      ? darkPurple
+                      ? darkblue
                       : const Color.fromARGB(123, 158, 158, 158),
                 ),
                 label: 'Home'),
@@ -60,7 +60,7 @@ class _MainScreenState extends State<MainScreen> {
                   Icons.person_outline,
                   weight: 0.05,
                   color: _pageIndex == 2
-                      ? darkPurple
+                      ? darkblue
                       : const Color.fromARGB(123, 158, 158, 158),
                 ),
                 label: "Account"),

@@ -50,7 +50,7 @@ app.use(secureHeaders);
 
 app.use(express.json({ limit: '10kb' }));
 
-app.use(express.static('public'));
+app.use('/public', express.static('public'));
 
 app.use(
   '/api-docs',

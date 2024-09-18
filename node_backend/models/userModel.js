@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
   photo: String,
   role: {
     type: String,
-    enum: ['user', 'admin'], // type of user exists in this
+    enum: ['user', 'admin-masjid', 'admin'], // type of user exists in this
     default: 'user'
   },
   password: {

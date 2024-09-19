@@ -10,8 +10,7 @@ class BodySubTextWidget extends StatelessWidget {
     return SizedBox(
       width: 60,
       height: 32,
-      child: Center(
-        child: Text(
+      child: Text(
           title,
           style: GoogleFonts.getFont(
             'Rubik',
@@ -22,7 +21,6 @@ class BodySubTextWidget extends StatelessWidget {
           maxLines: 2, // Allows a maximum of 2 lines
           overflow: TextOverflow.ellipsis, // Shows '...' if the text overflows
         ),
-      ),
     );
   }
 }

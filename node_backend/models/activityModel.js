@@ -2,16 +2,11 @@ const mongoose = require('mongoose');
 
 // seat schema
 const activitySchema = mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
-  },
-  name: {
+  mosqueId: {
     type: String,
     required: true
   },
-  location: {
+  programName: {
     type: String,
     required: true
   },
@@ -19,7 +14,11 @@ const activitySchema = mongoose.Schema({
     type: String,
     required: true
   },
-  date: {
+  imageUrl: {
+    type: String,
+    required: true
+  },
+  createdAt: {
     type: Date,
     required: true
   }

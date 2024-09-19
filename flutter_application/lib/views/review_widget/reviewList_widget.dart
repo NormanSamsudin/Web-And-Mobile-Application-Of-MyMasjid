@@ -25,7 +25,7 @@ class _ReviewlistWidgetState extends State<ReviewlistWidget> {
 
   @override
   Widget build(BuildContext context) {
-    //final List<ReviewModel> reviews = [review1, review2, review3];
+    
     return SizedBox(
       height: 600,
       child: FutureBuilder(

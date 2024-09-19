@@ -12,10 +12,17 @@ class ReviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 243, 243, 243),
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
-        child:  Column(
-          children: [HeaderDetailsPageWidget(), ReviewlistWidget()],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            HeaderDetailsPageWidget(),
+            const TitleWidget(title: "Reviews"),
+            ReviewlistWidget()
+          ],
         ),
       ),
     );

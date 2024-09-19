@@ -1,8 +1,6 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application/models/activity.dart';
-import 'package:flutter_application/models/review.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_application/glabal_variable.dart';
 

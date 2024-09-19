@@ -105,38 +105,12 @@ class _HeaderWidgetState extends State<HeaderDetailsPageWidget> {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    // overlayColor: MaterialStateProperty.all(Color(0x0C7F7F)),
                     child: const Icon(
                       Icons.arrow_back,
                       color: Colors.white,
                       weight: 20,
-                    )
-                    // Ink(
-                    //   width: 31,
-                    //   height: 31,
-                    //   decoration: const BoxDecoration(
-                    //       image: DecorationImage(
-                    //           image: AssetImage('assets/icons/bell.png'))),
-                    // ),
-                    ),
+                    )),
               )),
-          // Positioned(
-          //   left: 354,
-          //   top: 78,
-          //   child: Material(
-          //     child: InkWell(
-          //       onTap: () {},
-          //       child: Ink(
-          //         width: 31,
-          //         height: 31,
-          //         decoration: const BoxDecoration(
-          //           image: DecorationImage(
-          //               image: AssetImage('assets/icons/message.png')),
-          //         ),
-          //       ),
-          //     ),
-          //   ),
-          // )
         ],
       ),
     );

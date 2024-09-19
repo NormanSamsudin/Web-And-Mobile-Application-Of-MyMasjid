@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/views/screens/detail_secreen/about_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/activity_screen.dart';
+import 'package:flutter_application/views/screens/detail_secreen/lost_screen.dart';
+import 'package:flutter_application/views/screens/detail_secreen/qorban_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/qr_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/review_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -54,8 +57,8 @@ class MyApp extends ConsumerWidget {
 
           final user = ref.watch(userProvider);
           return user != null
-              ? ///MainScreen()
-              ActivityScreen()
+              ? MainScreen()
+               //QorbanScreen()
               : LoginScreen();
         },
       ),

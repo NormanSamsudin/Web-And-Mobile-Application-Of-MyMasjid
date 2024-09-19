@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/views/common_widget/title_feature.dart';
 import 'package:flutter_application/glabal_variable.dart';
+import 'package:flutter_application/views/screens/detail_secreen/about_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/activity_screen.dart';
+import 'package:flutter_application/views/screens/detail_secreen/lost_screen.dart';
+import 'package:flutter_application/views/screens/detail_secreen/qorban_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/qr_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/review_screen.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -38,10 +41,10 @@ class ServiceWidget extends StatelessWidget {
       const ReviewScreen(),
       const QrScreen(),
       const ActivityScreen(),
+      const LostScreen(),
+      const QorbanScreen(),
       const QrScreen(),
-      const QrScreen(),
-      const QrScreen(),
-      const QrScreen(),
+      const AboutScreen(),
       const QrScreen()
     ];
 
@@ -53,6 +56,7 @@ class ServiceWidget extends StatelessWidget {
       child: SizedBox(
         height: 300,
         child: GridView.builder(
+          padding:const EdgeInsets.only(top: 25),
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
@@ -81,7 +85,7 @@ class ServiceWidget extends StatelessWidget {
                               BoxShadow(
                                   blurRadius: 3,
                                   blurStyle: BlurStyle.outer,
-                                  color: Color.fromARGB(255, 0, 79, 116),
+                                  color: Color.fromARGB(59, 0, 79, 116),
                                   spreadRadius: 0.5,
                                   offset: Offset(1, 1))
                             ]),

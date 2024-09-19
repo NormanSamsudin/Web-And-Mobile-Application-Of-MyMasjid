@@ -4,7 +4,6 @@ import 'package:flutter_application/models/user.dart';
 
 class ActivityModel {
   final String id;
-  final String userId;
   final String mosqueId;
   final String programName;
   final String speaker;
@@ -13,7 +12,6 @@ class ActivityModel {
 
   ActivityModel(
       {required this.id,
-      required this.userId,
       required this.mosqueId,
       required this.programName,
       required this.speaker,
@@ -23,7 +21,6 @@ class ActivityModel {
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       "_id": id,
-      "userId": userId,
       "mosqueId": mosqueId,
       "programName": programName,
       "speaker": speaker,
@@ -37,7 +34,6 @@ class ActivityModel {
   factory ActivityModel.fromJson(Map<String, dynamic> map) {
     return ActivityModel(
       id: map['_id'] as String,
-      userId: map['userId'] as String,
       mosqueId: map['mosqueId'] as String,
       programName: map['programName'] as String,
       speaker: map['speaker'] as String,

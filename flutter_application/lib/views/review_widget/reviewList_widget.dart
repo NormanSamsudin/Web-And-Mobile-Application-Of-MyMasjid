@@ -6,6 +6,7 @@ import 'package:flutter_application/models/review.dart';
 import 'package:flutter_application/views/common_widget/bodySubText_widget.dart';
 import 'package:flutter_application/views/common_widget/subtitle_widget.dart';
 import 'package:flutter_application/views/common_widget/title_widget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ReviewlistWidget extends StatefulWidget {
   ReviewlistWidget({super.key});
@@ -25,7 +26,6 @@ class _ReviewlistWidgetState extends State<ReviewlistWidget> {
 
   @override
   Widget build(BuildContext context) {
-    
     return SizedBox(
       height: 600,
       child: FutureBuilder(
@@ -69,46 +69,95 @@ class _ReviewlistWidgetState extends State<ReviewlistWidget> {
                       );
                     },
                     child: SizedBox(
-                      height: 100,
                       child: ListTile(
-                        title: Text(
-                            review.userId), // Use Review userId as the title
-                        subtitle:
-                            BodySubTextWidget(title: '${review.message}\nRating: ${review.rating}'),
-                        leading: CircleAvatar(
-                          radius: 30,
-                          backgroundImage: NetworkImage(
-                              review.imageUrl), // Load user's image
-                          onBackgroundImageError: (_, __) {
-                            // Handle error while loading image
-                          },
-                        ),
-                        trailing: InkWell(
-                          onTap: () {
-                            showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return Dialog(
-                                  child: InteractiveViewer(
-                                    panEnabled:
-                                        false, // Can be set to false to disable panning
-                                    boundaryMargin: const EdgeInsets.all(20),
-                                    minScale: 0.5,
-                                    maxScale: 4.0,
-                                    child: Image.network(
-                                      review.imageUrl,
-                                      fit: BoxFit.contain,
+                        title: Container(
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      child: CircleAvatar(
+                                        radius: 15,
+                                        backgroundImage: NetworkImage(review
+                                            .imageUrl), // Load user's image
+                                        onBackgroundImageError: (_, __) {
+                                          // Handle error while loading image
+                                        },
+                                      ),
                                     ),
+                                    Spacer()
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Container(
+                                  width:
+                                      MediaQuery.of(context).size.width - 102,
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text(review
+                                              .userId), // Display the user name
+                                          const SizedBox(
+                                              width:
+                                                  8), // Add space between the name and stars
+                                          Row(
+                                            children: List.generate(
+                                              review
+                                                  .rating, // Generate stars based on rating
+                                              (index) => const Icon(
+                                                Icons.star,
+                                                color: Colors.amber,
+                                                size:
+                                                    16, // Adjust star size as needed
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Text(
+                                        review.message,
+                                        style: GoogleFonts.getFont(
+                                          'Rubik',
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 15,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                );
-                              },
-                            );
-                          },
-                          child: const Icon(
-                            Icons.info,
-                            color: Colors.grey,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
+
+                        // leading:
+                        //    Column(
+                        //     crossAxisAlignment: CrossAxisAlignment.start,
+                        //     mainAxisAlignment: MainAxisAlignment.start,
+                        //     children: [
+                        //       CircleAvatar(
+                        //         radius: 15,
+                        //         backgroundImage: NetworkImage(
+                        //             review.imageUrl), // Load user's image
+                        //         onBackgroundImageError: (_, __) {
+                        //           // Handle error while loading image
+                        //         },
+                        //       ),
+                        //       Spacer(),
+                        //     ],
+                        //   ),
                       ),
                     ),
                   );

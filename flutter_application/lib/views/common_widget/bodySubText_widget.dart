@@ -18,7 +18,7 @@ class BodySubTextWidget extends StatelessWidget {
             fontWeight: FontWeight.normal,
             fontSize: 12,
           ),
-          maxLines: 2, // Allows a maximum of 2 lines
+          maxLines: 3, // Allows a maximum of 2 lines
           overflow: TextOverflow.ellipsis, // Shows '...' if the text overflows
         ),
     );

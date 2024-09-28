@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_application/models/user.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 // make the data accessible within the application
 final userProvider =
@@ -36,4 +39,15 @@ class UserProvider extends StateNotifier<User?> {
   void signOut() {
     state = null;
   }
+
+  final userRoleProvider = FutureProvider<String>((ref) async {
+    final preferences = await SharedPreferences.getInstance();
+    final userDataString = preferences.getString('user');
+    if (userDataString != null) {
+      final Map<String, dynamic> userMap = jsonDecode(userDataString);
+      return userMap['role'];
+    } else {
+      return 'Guest'; // Default value if user data is not found
+    }
+  });
 }

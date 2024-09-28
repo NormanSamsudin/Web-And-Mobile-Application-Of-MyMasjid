@@ -72,4 +72,30 @@ _Click on the image above to watch the demo on YouTube._
    cd ..
    cd web_flutter_application
    flutter pub get
-   '''
+   ```
+
+## API Endpoints
+
+Below is a list of the available API endpoints for the Mosque Management Application.
+
+| HTTP Method | Endpoint                           | Description                                      | Parameters                        |
+| ----------- | ---------------------------------- | ------------------------------------------------ | --------------------------------- |
+| `POST`      | `/api/v1/auth/register`            | Register a new user (public or mosque admin).    | `name`, `email`, `password`       |
+| `POST`      | `/api/v1/auth/login`               | Log in an existing user.                         | `email`, `password`               |
+| `GET`       | `/api/v1/mosques`                  | Get a list of all mosques.                       | -                                 |
+| `GET`       | `/api/v1/mosques/:id`              | Get details of a specific mosque by ID.          | `id` (in URL)                     |
+| `POST`      | `/api/v1/mosques`                  | Add a new mosque (admin only).                   | `name`, `location`, `admin`       |
+| `PUT`       | `/api/v1/mosques/:id`              | Update mosque information (admin only).          | `id` (in URL), `name`, `location` |
+| `DELETE`    | `/api/v1/mosques/:id`              | Delete a mosque (admin only).                    | `id` (in URL)                     |
+| `POST`      | `/api/v1/reviews`                  | Add a review for a mosque.                       | `mosqueId`, `rating`, `comment`   |
+| `GET`       | `/api/v1/reviews/:mosqueId`        | Get all reviews for a specific mosque.           | `mosqueId` (in URL)               |
+| `POST`      | `/api/v1/sadaqah`                  | Donate sadaqah to a mosque.                      | `mosqueId`, `amount`              |
+| `GET`       | `/api/v1/sadaqah/:userId`          | Get donation history for a specific user.        | `userId` (in URL)                 |
+| `POST`      | `/api/v1/lost-and-found`           | Report a lost or found item in a mosque.         | `mosqueId`, `itemDescription`     |
+| `GET`       | `/api/v1/lost-and-found/:mosqueId` | Get all lost and found items for a mosque.       | `mosqueId` (in URL)               |
+| `POST`      | `/api/v1/volunteering`             | Sign up for a volunteering opportunity.          | `mosqueId`, `userId`              |
+| `GET`       | `/api/v1/volunteering/:mosqueId`   | Get all volunteering opportunities for a mosque. | `mosqueId` (in URL)               |
+
+### Authentication
+Some of the endpoints require authentication. Make sure to include a valid JWT token in the `Authorization` header for protected routes.
+

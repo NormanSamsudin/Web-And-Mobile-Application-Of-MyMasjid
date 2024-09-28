@@ -22,11 +22,35 @@ This project is designed to facilitate mosque management through both mobile and
 - **Backend**: Node.js (Express.js)
 - **Database**: MongoDB
 
+### NPM Packages Used
+
+Below is a list of the main Node.js packages used in this project, along with their purpose:
+
+- **@ngrok/ngrok**: Used to expose the development server to the internet for testing purposes.
+- **bcrypt & bcryptjs**: Libraries for hashing passwords securely. `bcryptjs` is a JavaScript-only version of `bcrypt`, useful when native dependencies are hard to install.
+- **cross-env**: Allows you to set environment variables across platforms (Windows/Linux/macOS).
+- **dotenv**: Loads environment variables from a `.env` file, allowing for better configuration management.
+- **express-mongo-sanitize**: Helps prevent MongoDB operator injection attacks.
+- **express-rate-limit**: Limits the number of requests a user can make in a given time to protect against brute force attacks.
+- **helmet**: Enhances the security of your Express apps by setting various HTTP headers.
+- **hpp**: Protects against HTTP parameter pollution attacks.
+- **html-to-text**: Converts HTML content to plain text, which is useful for sending plain text emails.
+- **jsonwebtoken**: Used to create and verify JSON Web Tokens (JWTs) for user authentication.
+- **mongoose**: ODM (Object Data Modeling) library to interact with MongoDB, making it easier to manage and validate schemas.
+- **morgan**: HTTP request logger middleware, useful for logging incoming requests to your app.
+- **multer**: Middleware for handling file uploads.
+- **nodemailer**: Allows the app to send emails, e.g., for password resets or notifications.
+- **sharp**: Used for image processing, such as resizing and formatting uploaded images.
+- **slugify**: Converts strings into URL-friendly slugs (useful for creating human-readable URLs).
+- **swagger-jsdoc & swagger-ui-express**: These libraries allow you to generate API documentation and display it through Swagger UI.
+- **validator**: Provides string validation and sanitization.
+- **xss-clean**: Helps protect against cross-site scripting (XSS) attacks.
+
 ## Demo
 
 Check out the demo video of the project:
 
-[![Mosque Management App Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Mosque Management App Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 _Click on the image above to watch the demo on YouTube._
 
@@ -35,15 +59,13 @@ _Click on the image above to watch the demo on YouTube._
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/mosque-management-app.git
-
-
-
-
-
-
-# code-bade-flutter-node.js
-I created this repository to simplify starting mobile applications using Flutter for the front end and Node.js for the back end. The Flutter application will include commonly used packages, while the back end will handle authentication and authorization
-
-## setup node.js dependencies
-
- run : npm install @ngrok/ngrok bcrypt bcryptjs cross-env dotenv express-mongo-sanitize express-rate-limit helmet hpp html-to-text jsonwebtoken mongoose morgan multer nodemailer sharp slugify swagger-jsdoc swagger-ui-express validator xss-clean
+   cd node_backend
+   npm install
+   npm start
+   cd ..
+   cd flutter_application
+   flutter pub get
+   cd ..
+   cd web_flutter_application
+   flutter pub get
+   '''

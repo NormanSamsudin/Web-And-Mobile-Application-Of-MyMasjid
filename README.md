@@ -2,6 +2,10 @@
 
 This project is designed to facilitate mosque management through both mobile and web applications. The mobile app caters to two types of users: **Public** and **Mosque Admin**, while the web application is utilized by **Religious Authorities** to monitor and manage mosques.
 
+## Why This Project Was Built
+
+I built this project just for fun and to explore real-world development while waiting for job opportunities before starting my career. I'm not entirely sure if this project will evolve into a real product, but I hope one day it can be used to make a meaningful impact on the ummah. If you find this project valuable or believe it can go further, feel free to DM me for collaboration!
+
 ## Features
 
 ### Mobile Application (Flutter)
@@ -50,7 +54,7 @@ Below is a list of the main Node.js packages used in this project, along with th
 
 Check out the demo video of the project:
 
-[![Mosque Management App Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![Mosque Management App Demo](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 _Click on the image above to watch the demo on YouTube._
 

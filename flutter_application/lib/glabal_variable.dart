@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-String uri = "http://192.168.0.6:3000";
+
+String uri = "http://192.168.0.11:3000";
 const Color customOrange1 = Color(0xFFFF7B00); // FF7B00
 const Color customOrange2 = Color(0xFFFF8800); // FF8800
 const Color customOrange3 = Color(0xFFFF9500); // FF9500

@@ -14,12 +14,11 @@ import 'package:flutter_application/views/screens/main_screen.dart';
 final providerContainer = ProviderContainer();
 
 class UserController {
-  
-   Future<String> getUserToken() async {
+  Future<String> getUserToken() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     // Retrieve the stored auth token
     String? authToken = preferences.getString('auth_token');
-    return authToken.toString(); 
+    return authToken.toString();
   }
 
   //  Future<Map<String, dynamic>> getUserData() async {
@@ -39,7 +38,7 @@ class UserController {
   //   }
   // }
 
-    Future<String> getUserFullname() async {
+  Future<String> getUserFullname() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
 
     // Retrieve the stored user data as a JSON string
@@ -56,6 +55,4 @@ class UserController {
       return '';
     }
   }
-
-  
 }

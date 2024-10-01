@@ -1,0 +1,20 @@
+# Ignore all .log files everywhere
+*.log
+
+# Ignore specific folders in all locations
+**/build/
+**/dist/
+**/node_modules/
+
+# Ignore specific files inside a specific folder across the project
+**/logs/*.log
+
+# Ignore config files (e.g., .env) but allow .env.example
+.env
+!.env.example
+
+# Ignore IDE configuration files (like for VSCode, JetBrains)
+.vscode/
+.idea/
+
+**/secret.dart

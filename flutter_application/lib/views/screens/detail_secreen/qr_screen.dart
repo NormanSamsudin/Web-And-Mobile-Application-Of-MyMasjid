@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/views/common_widget/headerWidgetDetailPage.dart';
 import 'package:flutter_application/views/common_widget/title_widget.dart';
+import 'package:flutter_application/views/qr_widget/button_stripe.dart';
 import 'package:flutter_application/views/qr_widget/displayQR_widget.dart';
 
 class QrScreen extends StatelessWidget {
@@ -16,7 +17,9 @@ class QrScreen extends StatelessWidget {
         children: [
           HeaderDetailsPageWidget(),
           const TitleWidget(title: "QR Code"),
-          DisplayQrWidget()
+          DisplayQrWidget(),
+          Spacer(),
+          PaymentStripeButton()
         ],
       ),
     );

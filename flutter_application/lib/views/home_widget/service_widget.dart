@@ -206,8 +206,8 @@ class ServiceWidget extends ConsumerWidget {
           ),
           child: Column(
             children: [
-              Text('Welcome, $userFullName!',
-                  style: const TextStyle(fontSize: 18)),
+              // Text('Welcome, $userFullName!',
+              //     style: const TextStyle(fontSize: 18)),
               SizedBox(
                 height: 300,
                 child: GridView.builder(

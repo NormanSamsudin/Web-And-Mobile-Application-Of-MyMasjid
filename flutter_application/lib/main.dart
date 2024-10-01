@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/glabal_variable.dart';
+import 'package:flutter_application/secret.dart';
 import 'package:flutter_application/views/screens/detail_secreen/about_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/activity_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/lost_screen.dart';
@@ -6,14 +8,22 @@ import 'package:flutter_application/views/screens/detail_secreen/qorban_screen.d
 import 'package:flutter_application/views/screens/detail_secreen/qr_screen.dart';
 import 'package:flutter_application/views/screens/detail_secreen/review_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_application/provider/user_provider.dart';
 import 'package:flutter_application/views/screens/authentication/login_screen.dart';
 import 'package:flutter_application/views/screens/main_screen.dart';
 
-void main() {
-  // RUn the flutter app wrapped in a ProviderScope for managing state
+void main() async{
+  await _setup();
+  // RUn the flutter ap
+  //await p wrapped in a ProviderScope for managing state
   runApp(ProviderScope(child: const MyApp()));
+}
+
+Future<void> _setup() async {
+WidgetsFlutterBinding.ensureInitialized();
+Stripe.publishableKey= stripePublishableKey;
 }
 
 // ROOT widget of the application, a consumerwidget to consume state change

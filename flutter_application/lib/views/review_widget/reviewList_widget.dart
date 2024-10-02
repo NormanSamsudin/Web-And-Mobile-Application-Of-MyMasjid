@@ -102,11 +102,6 @@ class _ReviewlistWidgetState extends State<ReviewlistWidget> {
                                           child: const CircleAvatar(
                                             radius: 15,
                                             child: Icon(Icons.person),
-                                            // backgroundImage: NetworkImage(review
-                                            //     .imageUrl), // Load user's image
-                                            //onBackgroundImageError: (_, __) {
-                                            // Handle error while loading image
-                                            //},
                                           ),
                                         ),
                                         const Spacer()

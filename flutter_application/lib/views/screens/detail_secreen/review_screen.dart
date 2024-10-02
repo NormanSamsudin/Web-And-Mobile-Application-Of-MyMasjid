@@ -3,11 +3,22 @@ import 'package:flutter_application/views/common_widget/headerWidgetDetailPage.d
 import 'package:flutter_application/views/common_widget/subtitle_widget.dart';
 import 'package:flutter_application/views/common_widget/title_widget.dart';
 import 'package:flutter_application/views/qr_widget/displayQR_widget.dart';
+import 'package:flutter_application/views/review_widget/modalBottom_widget.dart';
 import 'package:flutter_application/views/review_widget/reviewList_widget.dart';
 import 'package:flutter_application/glabal_variable.dart';
 
 class ReviewScreen extends StatelessWidget {
   const ReviewScreen({super.key});
+
+  // Function to show the bottom modal sheet
+  void _showModalSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return ModalbottomWidget();
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +36,19 @@ class ReviewScreen extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: InkWell(
+          onTap: () {
+            _showModalSheet(context);
+          },
+          child: const CircleAvatar(
+            radius: 25,
+            backgroundColor: darkblue,
+            child: Icon(
+              Icons.message,
+              color: Colors.white,
+            ),
+          )),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }

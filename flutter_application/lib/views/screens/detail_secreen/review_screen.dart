@@ -15,7 +15,7 @@ class ReviewScreen extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return ModalbottomWidget();
+        return ModalBottomWidget();
       },
     );
   }

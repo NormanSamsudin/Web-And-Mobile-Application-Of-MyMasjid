@@ -8,9 +8,9 @@ class StripeService {
 
   static final StripeService instance = StripeService._();
 
-  Future<void> makePayment() async {
-    try {} catch (e) {
-      String? paymentIntentClientSecret = await _createPaymentIntent(10, "usd");
+  Future<void> makePayment(int value) async {
+    try {
+      String? paymentIntentClientSecret = await _createPaymentIntent(value, "usd");
 
       if (paymentIntentClientSecret == null) {
         print('Payment failed: Failed to create payment intent');
@@ -18,15 +18,15 @@ class StripeService {
       }
 
       await Stripe.instance.initPaymentSheet(
-          paymentSheetParameters: SetupPaymentSheetParameters(
-        paymentIntentClientSecret: paymentIntentClientSecret,
-        merchantDisplayName: 'Norman Samsudin',
-      ));
+        paymentSheetParameters: SetupPaymentSheetParameters(
+          paymentIntentClientSecret: paymentIntentClientSecret,
+          merchantDisplayName: 'Norman Samsudin',
+        ),
+      );
 
       await _processPayment();
-
+    } catch (e) {
       print('Payment failed: $e');
-      return;
     }
   }
 
@@ -38,26 +38,52 @@ class StripeService {
         "currency": currency
       };
 
+      // Make request to your backend (replace with your backend URL)
       var response = await dio.post(
-        '',
+        '$uri/api/v1/stripe/paymentIntent', // Replace with your backend URL
         data: data,
-        options:
-            Options(contentType: Headers.formUrlEncodedContentType, headers: {
-          "Authorization": "Bearer $stripeSecretKey",
-          "Content-Type": "application/x-www-form-urlencoded"
-        }),
       );
-      print('status ${response.statusCode}');
-
+      print(response.statusCode);
       if (response.data != null) {
         print(response.data);
-        return response.data["client_secret"];
+        return response.data[
+            "clientSecret"]; // Use the correct key returned by the backend
       }
+      return null;
       return "";
     } catch (e) {
       print('Payment failed: $e');
+      return null;
     }
   }
+  // Future<String?> _createPaymentIntent(int amount, String currency) async {
+  //   try {
+  //     final Dio dio = Dio();
+  //     Map<String, dynamic> data = {
+  //       "amount": _calculateAmount(amount),
+  //       "currency": currency
+  //     };
+
+  //     var response = await dio.post(
+  //       '$uri/api/v1/stripe/paymentIntent',
+  //       data: data,
+  //       options:
+  //           Options(contentType: Headers.formUrlEncodedContentType, headers: {
+  //         "Authorization": "Bearer $stripeSecretKey",
+  //         "Content-Type": "application/x-www-form-urlencoded"
+  //       }),
+  //     );
+  //     print('status ${response.statusCode}');
+
+  //     if (response.data != null) {
+  //       print(response.data);
+  //       return response.data["client_secret"];
+  //     }
+  //     return "";
+  //   } catch (e) {
+  //     print('Payment failed: $e');
+  //   }
+  // }
 
   Future<void> _processPayment() async {
     try {

@@ -21,7 +21,7 @@ class PaymentStripeButton extends StatelessWidget {
           ),
           onPressed: () {
             // Implement logic for handling payment using Stripe API
-            StripeService.instance.makePayment();
+             StripeService.instance.makePayment();
           },
           child: const Text('Online Transfer'),
         ),

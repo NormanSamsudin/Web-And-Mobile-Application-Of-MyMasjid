@@ -16,6 +16,7 @@ const swaggerSpesification = require('./config/swaggerOption');
 const activityRouter = require('./routes/activityRoutes');
 const lostRouter = require('./routes/lostRoutes');
 const aboutRouter = require('./routes/aboutRoutes');
+const stripeRouter = require('./routes/stripeRoutes');
 
 const app = express();
 
@@ -72,6 +73,7 @@ app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/activities', activityRouter);
 app.use('/api/v1/lost', lostRouter);
 app.use('/api/v1/about', aboutRouter);
+app.use('/api/v1/stripe', stripeRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

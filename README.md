@@ -60,7 +60,9 @@ _Click on the image above to watch the demo on YouTube._
 
 ## Installation
 
-1. Clone the repository:
+   ### Setup local database mongoDB
+
+   ### Clone repository
    ```bash
    git clone https://github.com/yourusername/mosque-management-app.git
    cd node_backend
@@ -73,6 +75,16 @@ _Click on the image above to watch the demo on YouTube._
    cd web_flutter_application
    flutter pub get
    ```
+
+   ### Setup docker for backend
+   - Install [Docker](https://www.docker.com/products/docker-desktop/) on your machine.
+   - Build and Run Docker
+   ```bash
+   cd node_backend
+   docker-compose -f docker-compose.yml build
+   docker-compose -f docker-compose.yml up
+   ```
+
 
 ## API Endpoints
 

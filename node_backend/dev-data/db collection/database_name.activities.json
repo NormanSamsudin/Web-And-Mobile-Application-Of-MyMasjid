@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "66ea9ccf0c37c02cb68e56c6"
+  },
+  "mosqueId": "asdasd",
+  "programName": "Ceramah Perdana",
+  "speaker": "Ustaz Abdul Somad",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/1.png",
+  "createdAt": {
+    "$date": "2024-09-13T00:45:12.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ea9cdc0c37c02cb68e56c8"
+  },
+  "mosqueId": "asdasd",
+  "programName": "Ceramah Perdana",
+  "speaker": "Ustaz Abdulllah",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/2.png",
+  "createdAt": {
+    "$date": "2024-09-13T00:45:12.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ea9ce70c37c02cb68e56ca"
+  },
+  "mosqueId": "asdasd",
+  "programName": "Ceramah Perdana",
+  "speaker": "Ustaz Abdulllah Khairi",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "createdAt": {
+    "$date": "2024-09-13T00:45:12.000Z"
+  },
+  "__v": 0
+}]

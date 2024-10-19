@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "66eba5170b76589b1c6bc15b"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "MD Shaari Abdullah",
+  "position": "Nazir",
+  "contact": "shaari@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba5380b76589b1c6bc15d"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "MD Fuad Ilias",
+  "position": "Tim Nazir",
+  "contact": "fuad@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba5660b76589b1c6bc15f"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Malek Faizal Idrus",
+  "position": "Bendahari",
+  "contact": "malek@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba5ab0b76589b1c6bc161"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Nadzrin Rijal",
+  "position": "Setiausaha",
+  "contact": "nadzrin@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba5e50b76589b1c6bc163"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Nadzrin Abdullah",
+  "position": "Biro Integrasi Kariah",
+  "contact": "dollah@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba5fc0b76589b1c6bc165"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Saiful Badar Abdullah",
+  "position": "Biro Dakwah",
+  "contact": "badar@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba63d0b76589b1c6bc167"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Badar Abdullah",
+  "position": "Juru Kira-kira",
+  "contact": "abdillah@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba64b0b76589b1c6bc169"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Iman Abdullah",
+  "position": "Imam 1",
+  "contact": "abdillah@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba6520b76589b1c6bc16b"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Iman Imam",
+  "position": "Imam 2",
+  "contact": "abdillah@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba66a0b76589b1c6bc16d"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Saif Ilmam",
+  "position": "Siak 2",
+  "contact": "saif@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba6730b76589b1c6bc16f"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Saif Ilman",
+  "position": "Siak 1",
+  "contact": "saif@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eba68b0b76589b1c6bc171"
+  },
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "fullName": "Hasyree Ilman",
+  "position": "Juru Nikah",
+  "contact": "ayie@gmail.com",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+}]

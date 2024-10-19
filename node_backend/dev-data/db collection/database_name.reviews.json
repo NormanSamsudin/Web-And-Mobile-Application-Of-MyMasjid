@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "66ea5d4bda47ede717259395"
+  },
+  "userId": "Amirul",
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "message": "The mosque is very spacious and well-maintained.",
+  "rating": 5,
+  "createdAt": {
+    "$date": "2024-09-10T02:15:30.000Z"
+  },
+  "imageUrl": "http://192.168.0.11:3000/public/img/review/1.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ea5d60da47ede717259398"
+  },
+  "userId": "Intan",
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "message": "Impressed with the cleanliness of the wudu area and the availability of prayer mats.",
+  "rating": 4,
+  "createdAt": {
+    "$date": "2024-09-11T03:25:42.000Z"
+  },
+  "imageUrl": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ea5d72da47ede71725939c"
+  },
+  "userId": "Haris H.",
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "message": "Beautiful design and very peaceful atmosphere during prayers.",
+  "rating": 5,
+  "createdAt": {
+    "$date": "2024-09-13T00:45:12.000Z"
+  },
+  "imageUrl": "http://192.168.0.11:3000/public/img/review/4.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ea5d7cda47ede71725939e"
+  },
+  "userId": "Mui'zz",
+  "mosqueId": "66ea2d0f948e462d23821a23",
+  "message": "The toilet sangat bersih, and the staff is very friendly and helpful.",
+  "rating": 4,
+  "createdAt": {
+    "$date": "2024-09-14T08:22:38.000Z"
+  },
+  "imageUrl": "http://192.168.0.11:3000/public/img/review/6.png",
+  "__v": 0
+}]

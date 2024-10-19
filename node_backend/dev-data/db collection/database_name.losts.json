@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "66eb912d9e6932cbbcb52452"
+  },
+  "mosqueId": "asdasd",
+  "status": "claimed",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eb91379e6932cbbcb52454"
+  },
+  "mosqueId": "asdasd",
+  "status": "claimed",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/1.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eb913b9e6932cbbcb52456"
+  },
+  "mosqueId": "asdasd",
+  "status": "claimed",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/2.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eb91409e6932cbbcb52458"
+  },
+  "mosqueId": "asdasd",
+  "status": "claimed",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66eb91449e6932cbbcb5245a"
+  },
+  "mosqueId": "asdasd",
+  "status": "claimed",
+  "imageUrl": "http://192.168.0.6:3000/public/img/activity/5.png",
+  "__v": 0
+}]

@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "66e8f3325a3a36c52487b25d"
+  },
+  "image": "http://192.168.145.1:3000/public/img/banner/1.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e8f3455a3a36c52487b25f"
+  },
+  "image": "http://192.168.145.1:3000/public/img/banner/2.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e8f3a15a3a36c52487b261"
+  },
+  "image": "http://192.168.145.1:3000/public/img/banner/3.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e8f3a45a3a36c52487b263"
+  },
+  "image": "http://192.168.145.1:3000/public/img/banner/4.png",
+  "__v": 0
+}]

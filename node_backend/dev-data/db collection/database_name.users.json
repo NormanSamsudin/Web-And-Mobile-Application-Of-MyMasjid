@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "66e7a3af69f1b5c3e6d758eb"
+  },
+  "fullName": "Norman Samsasdaaaaaaaasudin",
+  "email": "normansamsaaudin49fghasdasfghasd@gmail.com",
+  "role": "user",
+  "password": "$2b$12$MbNuyL7Do0i3deA.qT3Ia.y.lqPJpU9O3MAwlJI92zx1I6ZwHjBKG",
+  "active": true,
+  "state": "",
+  "city": "",
+  "locality": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66e7a3e469f1b5c3e6d758ed"
+  },
+  "fullName": "normanadmin",
+  "email": "normanadmin@gmail.com",
+  "role": "user",
+  "password": "$2b$12$Fq6wxv7YnRjLNSqjf3NEEO08fDEIyTE.oO9h4IkteAe/fm3O0B6MG",
+  "active": true,
+  "state": "",
+  "city": "",
+  "locality": "",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66ea2d0f948e462d23821a23"
+  },
+  "fullName": "Masjid Najihin",
+  "email": "najahkejayaan@gmail.com",
+  "role": "admin-masjid",
+  "password": "$2b$12$x5qRa4KUonPsTn.2M1..Ouhozn5sX/cmNjk5aUjjCZxrymi1Nl9u.",
+  "active": true,
+  "state": "",
+  "city": "",
+  "locality": "",
+  "__v": 0
+}]

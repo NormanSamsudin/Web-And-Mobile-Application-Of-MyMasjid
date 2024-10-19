@@ -131,6 +131,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application/views/screens/detail_secreen/money_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_application/views/common_widget/title_feature.dart';
 import 'package:flutter_application/glabal_variable.dart';
@@ -168,7 +169,7 @@ class ServiceWidget extends ConsumerWidget {
       'Qorban',
       'Volunteer',
       'About',
-      'Contact'
+      'Money'
     ];
 
     final List<Icon> icons = [
@@ -179,7 +180,7 @@ class ServiceWidget extends ConsumerWidget {
       const Icon(MingCute.knife_line),
       const Icon(OctIcons.copilot),
       const Icon(Icons.info),
-      const Icon(Icons.contact_phone),
+      const Icon(Icons.dashboard_customize_rounded),
     ];
 
     final List<Widget> _pages = [
@@ -190,7 +191,7 @@ class ServiceWidget extends ConsumerWidget {
       const QorbanScreen(),
       const QrScreen(),
       const AboutScreen(),
-      const QrScreen()
+      const MoneyScreen()
     ];
 
     // Get the user full name from the FutureProvider

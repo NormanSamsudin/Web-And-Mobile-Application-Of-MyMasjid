@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 // seat schema
 const aboutSchema = mongoose.Schema({
   mosqueId: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true
   },
   fullName: {

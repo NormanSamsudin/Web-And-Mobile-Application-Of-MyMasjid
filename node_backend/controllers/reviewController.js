@@ -36,4 +36,5 @@ exports.resizeQrPhoto = catchAsync(async (req, res, next) => {
 
 exports.uploadReviewPhoto = upload.single('photo');
 exports.getAllReview = factory.getAll(Review);
+exports.getReviewById = factory.getOne(Review);
 exports.AddReview = factory.createOne(Review);

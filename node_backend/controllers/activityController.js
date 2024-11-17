@@ -36,4 +36,5 @@ exports.resizeQrPhoto = catchAsync(async (req, res, next) => {
 
 exports.uploadActivityPhoto = upload.single('photo');
 exports.getAllActivity = factory.getAll(Activity);
+exports.getActivityById = factory.getOne(Activity);
 exports.AddActivity = factory.createOne(Activity);

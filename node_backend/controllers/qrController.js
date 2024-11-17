@@ -35,5 +35,6 @@ exports.resizeQrPhoto = catchAsync(async (req, res, next) => {
 });
 
 exports.uploadUserPhoto = upload.single('photo');
-exports.getAllBanner = factory.getAll(Qr);
-exports.AddBanner = factory.createOne(Qr);
+exports.getAllQr = factory.getAll(Qr);
+exports.getQrById = factory.getOne(Qr);
+exports.AddQr = factory.createOne(Qr);

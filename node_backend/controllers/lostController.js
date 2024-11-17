@@ -36,4 +36,5 @@ exports.resizeQrPhoto = catchAsync(async (req, res, next) => {
 
 exports.uploadActivityPhoto = upload.single('photo');
 exports.getAllLostItem = factory.getAll(Lost);
+exports.getLostItembyId = factory.getOne(Lost);
 exports.AddLostItem = factory.createOne(Lost);

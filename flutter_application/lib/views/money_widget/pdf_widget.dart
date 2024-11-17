@@ -37,7 +37,7 @@ class _PdfWidgetState extends ConsumerState<PdfWidget> {
       String? mosqueId = await mosqueController.getMosqueId();
 
       if (mosqueId != null) {
-        String pdfUrl = 'http://10.0.2.2:3000/public/pdf/$mosqueId.pdf';
+        String pdfUrl = 'http://192.168.0.11:3000/public/pdf/$mosqueId.pdf';
         File? pdfFile = await _downloadPdf(pdfUrl);
         if (pdfFile != null) {
           setState(() {
@@ -83,7 +83,7 @@ class _PdfWidgetState extends ConsumerState<PdfWidget> {
     return Column(
       children: [
         SizedBox(
-          height: 550,
+          height: 500,
           child: Expanded(
             child: PDFView(
               filePath: _pdfFile!.path,
@@ -96,8 +96,7 @@ class _PdfWidgetState extends ConsumerState<PdfWidget> {
               },
               onPageChanged: (page, total) {
                 setState(() {
-                  _currentPage = page! -
-                      1; // Adjust page index (PDFView starts counting at 1)
+                  _currentPage = page!; // Adjust page index (PDFView starts counting at 1)
                 });
               },
             ),
@@ -108,7 +107,7 @@ class _PdfWidgetState extends ConsumerState<PdfWidget> {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: Text(
-            'Page ${_currentPage + 2} of $_totalPage', // Shows the current page and total pages
+            'Page ${_currentPage + 1} of $_totalPage', // Shows the current page and total pages
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           ),
         ),
